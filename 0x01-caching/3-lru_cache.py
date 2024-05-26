@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-LRUcaching module
+Least Recently Used caching module.
 """
 from collections import OrderedDict
 
@@ -36,8 +36,8 @@ class LRUCache(BaseCaching):
             self.cache_data[key] = item
 
     def get(self, key):
-        ""
-        r"etrieves an item by key
+        """
+        retrieves an item by key
         """
         if key is not None and key in self.cache_data:
             self.cache_data.move_to_end(key, last=False)
